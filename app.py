@@ -1,6 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
+import os
 
 app = Flask(__name__)
+
+# List to store newsletter subscriptions
+subscribers = []
 
 @app.route('/')
 def home():
@@ -18,6 +22,17 @@ def features():
 def roadmap():
     return render_template('roadmap.html')
 
+@app.route('/subscribe', methods=['POST'])
+def subscribe():
+    email = request.form.get('email')
+    if email and email not in subscribers:
+        subscribers.append(email)
+        return jsonify({"success": True, "message": "Thank you for subscribing!"})
+    elif email in subscribers:
+        return jsonify({"success": True, "message": "You're already subscribed!"})
+    else:
+        return jsonify({"success": False, "message": "Invalid email address"})
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
 else:
@@ -26,5 +41,4 @@ else:
     app.config['PREFERRED_URL_SCHEME'] = 'https'
     
 # Configure for production
-import os
 port = int(os.environ.get("PORT", 5000))

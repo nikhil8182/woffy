@@ -149,24 +149,52 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const emailInput = this.querySelector('input[type="email"]');
             const email = emailInput.value.trim();
+            const button = this.querySelector('button');
+            const originalText = button.textContent;
             
             if (validateEmail(email)) {
-                // Show success message (in a real site, you'd submit to a backend)
-                const button = this.querySelector('button');
-                const originalText = button.textContent;
+                // Change button state
+                button.textContent = "Subscribing...";
+                button.disabled = true;
                 
-                button.textContent = "Thank You!";
-                button.style.backgroundColor = "#2ecc71";
-                emailInput.value = "";
+                // Create formData
+                const formData = new FormData();
+                formData.append('email', email);
                 
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.backgroundColor = "";
-                }, 3000);
-                
-                // In a real implementation, you would send this to your backend:
-                console.log("Email submitted:", email);
+                // Submit to backend
+                fetch('/subscribe', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        button.textContent = "Thank You!";
+                        button.style.backgroundColor = "#2ecc71";
+                        emailInput.value = "";
+                    } else {
+                        button.textContent = data.message;
+                        button.style.backgroundColor = "#e74c3c";
+                    }
+                    
+                    // Reset button after delay
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = "";
+                        button.disabled = false;
+                    }, 3000);
+                })
+                .catch(error => {
+                    console.error("Subscription error:", error);
+                    button.textContent = "Try Again";
+                    button.style.backgroundColor = "#e74c3c";
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = "";
+                        button.disabled = false;
+                    }, 3000);
+                });
             } else {
                 // Simple error handling
                 emailInput.style.borderColor = "#e74c3c";
