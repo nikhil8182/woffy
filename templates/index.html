@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#121212">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Woffy.ai - Your AI Companion with a Heart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Add favicon for better mobile experience -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <!-- Add mobile web app capability -->
+    <meta name="apple-mobile-web-app-title" content="Woffy.ai">
+    <meta name="description" content="Woffy.ai is your emotionally intelligent AI companion, designed to provide comfort, joy and support throughout your day.">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Woffy.ai</h1>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('home') }}" class="active">Home</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('features') }}">Features</a>
+                <a href="{{ url_for('roadmap') }}">Roadmap</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Meet Woffy – Your Companion with a Heart</h1>
+                <p>An emotionally intelligent AI pet designed to connect, comfort, and delight every day, adapting to your needs and emotions.</p>
+                <a href="#join" class="cta-button">Join Our Journey</a>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im.png') }}" alt="Woffy AI Companion" class="hero-img">
+            </div>
+        </section>
+
+        <section class="about-brief">
+            <h2>About Woffy</h2>
+            <div class="formats">
+                <div class="format-card">
+                    <div class="card-img-container">
+                        <img src="{{ url_for('static', filename='images/4x3_An_ultra_realistic__high_quality.png') }}" alt="Digital Avatar" class="card-img">
+                    </div>
+                    <h3>Digital Avatar</h3>
+                    <p>Interact with Woffy's charming digital self through your devices, enjoying meaningful conversations and emotional engagement anywhere.</p>
+                </div>
+                <div class="format-card">
+                    <div class="card-img-container">
+                        <img src="{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im (1).png') }}" alt="Physical Robot" class="card-img">
+                    </div>
+                    <h3>Physical Robot</h3>
+                    <p>Experience Woffy in the physical world with our lifelike robot that can express emotions, respond to touch, and provide a tangible companion presence.</p>
+                </div>
+                <div class="format-card">
+                    <div class="card-img-container">
+                        <img src="{{ url_for('static', filename='images/9x16_create_an_ai_pet_dog_look_realis.png') }}" alt="App Integration" class="card-img">
+                    </div>
+                    <h3>App Integration</h3>
+                    <p>Access Woffy seamlessly through our intuitive app and website, keeping your companion close even when you're on the go.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-preview">
+            <h2>Key Features</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>Emotional Intelligence</h3>
+                    <ul>
+                        <li>Recognizes your emotional state</li>
+                        <li>Responds with genuine empathy</li>
+                        <li>Adapts to your mood and needs</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>Multi-Platform</h3>
+                    <ul>
+                        <li>Digital avatar integration</li>
+                        <li>Physical robot companion</li>
+                        <li>Mobile app and web access</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>Daily Benefits</h3>
+                    <ul>
+                        <li>Comfort during challenging moments</li>
+                        <li>Daily joy and entertainment</li>
+                        <li>Family-friendly interactions</li>
+                        <li>Personalized experiences</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="join" class="join-journey">
+            <h2>Join the Woffy Journey</h2>
+            <p>Sign up to get updates on Woffy's development, early access opportunities, and special launch offers.</p>
+            <form class="signup-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Get Updates</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Woffy.ai</h2>
+                <p>Companionship reimagined</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('features') }}">Features</a></li>
+                    <li><a href="{{ url_for('roadmap') }}">Roadmap</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="mailto:contact@woffy.ai">Email Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Woffy.ai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Add video modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="woffyVideo" controls>
+                <source src="{{ url_for('static', filename='images/Professional_Mode_Generated_Video.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Add video modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add video button to hero section
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                const videoButton = document.createElement('button');
+                videoButton.className = 'video-button';
+                videoButton.innerHTML = '<span class="play-icon">▶</span> Watch Demo';
+                videoButton.style.marginLeft = '1rem';
+                
+                // Get the CTA button and append video button after it
+                const ctaButton = heroContent.querySelector('.cta-button');
+                if (ctaButton) {
+                    ctaButton.parentNode.insertBefore(videoButton, ctaButton.nextSibling);
+                }
+                
+                // Modal elements
+                const modal = document.getElementById('videoModal');
+                const closeBtn = document.querySelector('.close-modal');
+                const video = document.getElementById('woffyVideo');
+                
+                // Open modal on button click
+                videoButton.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                });
+                
+                // Close modal
+                closeBtn.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                    video.pause();
+                });
+                
+                // Close modal when clicking outside
+                window.addEventListener('click', function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                        video.pause();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

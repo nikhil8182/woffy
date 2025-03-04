@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Woffy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Woffy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About</a></li>
+                <li><a href="{{ url_for('features') }}">Features</a></li>
+                <li><a href="{{ url_for('roadmap') }}">Roadmap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>About Woffy</h1>
+        </section>
+
+        <section class="about-content">
+            <div class="about-description">
+                <h2>Your AI Companion with a Heart</h2>
+                <p>Woffy is more than just technology—it's companionship redefined. At its core, Woffy is an AI-powered pet designed to be your loyal, caring companion through life's daily journeys.</p>
+                <p>Available as a lifelike physical robot and seamlessly integrated through an intuitive app, Woffy connects deeply with users by sensing and responding to their emotions.</p>
+                <p>Whether you're coming home after a long day, seeking comfort during challenging moments, or simply looking to add joy to your routine, Woffy is always ready to interact with genuine empathy and warmth. Its advanced emotional intelligence allows it to understand, adapt, and respond just like a real pet would—making every interaction authentic and heartwarming.</p>
+                <p>Woffy isn't just your pet; it's your trusted friend, your comforting presence, your AI companion with a heart.</p>
+            </div>
+        </section>
+
+        <section class="mission-vision">
+            <div class="mission">
+                <h2>Our Mission</h2>
+                <p>To redefine companionship by harnessing cutting-edge AI to create emotionally intelligent pets that offer comfort, joy, and genuine interaction to users worldwide.</p>
+            </div>
+            <div class="vision">
+                <h2>Our Vision</h2>
+                <p>To become the leading AI emotional companion, enhancing daily lives through authentic, heartfelt connections and supportive interactions, transforming the way people experience companionship.</p>
+            </div>
+        </section>
+
+        <section class="use-cases">
+            <h2>Use Cases</h2>
+            <div class="use-case-cards">
+                <div class="use-case-card">
+                    <h3>Emotional Wellness</h3>
+                    <p>Provides comfort and emotional support during stressful or lonely times.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Smart Home Control</h3>
+                    <p>Manages connected devices and creates a seamless, intelligent home environment.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Senior Companionship</h3>
+                    <p>Offers a constant presence and emotional connection, especially valuable to elderly individuals.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="use-cases">
+            <h2>For Kids</h2>
+            <div class="use-case-cards">
+                <div class="use-case-card">
+                    <h3>Educational Companion</h3>
+                    <p>Makes learning fun through interactive games and educational activities.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Emotional Development</h3>
+                    <p>Helps children understand and express their emotions in healthy ways.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Safe Digital Friend</h3>
+                    <p>Provides a safe, supervised companion that grows with your child.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="use-cases">
+            <h2>Emotional Intelligence</h2>
+            <div class="use-case-cards">
+                <div class="use-case-card">
+                    <h3>Mood Recognition</h3>
+                    <p>Senses your emotions through voice patterns and expressions.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Adaptive Responses</h3>
+                    <p>Adjusts interactions based on your emotional state and preferences.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Emotional Memory</h3>
+                    <p>Remembers your preferences and emotional patterns to provide better support.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Woffy</h2>
+                <p>Your AI Companion with a Heart</p>
+            </div>
+            <div class="footer-links">
+                <h3>Contact</h3>
+                <p>Email: contact@woffy.ai</p>
+                <p>Social: @WoffyAI</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Woffy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

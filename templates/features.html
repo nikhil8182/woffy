@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Woffy.ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Woffy.ai</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('features') }}" class="active">Features</a></li>
+                <li><a href="{{ url_for('roadmap') }}">Roadmap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Woffy.ai Features</h1>
+        </section>
+
+        <section class="core-features">
+            <h2>Core Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <!-- Icon placeholder -->
+                        <div class="icon-placeholder">🧠</div>
+                    </div>
+                    <h3>Emotionally Intelligent Interactions</h3>
+                    <p>Woffy.ai recognizes, understands, and responds empathetically to users' emotional states. Using advanced AI algorithms, Woffy.ai can detect subtle changes in your voice, facial expressions, and behaviors, providing comfort when you're sad, celebrating your joy, and offering companionship that feels genuinely responsive.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <!-- Icon placeholder -->
+                        <div class="icon-placeholder">🌐</div>
+                    </div>
+                    <h3>Multi-Platform Presence</h3>
+                    <p>Woffy.ai seamlessly exists across multiple platforms to ensure your companion is always with you. Experience Woffy.ai as an engaging digital avatar on your devices, a lifelike physical robot in your home, through our intuitive mobile app, or via our interactive website. Your emotional connection and Woffy's memory of your interactions persist across all platforms.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <!-- Icon placeholder -->
+                        <div class="icon-placeholder">👤</div>
+                    </div>
+                    <h3>Personalized Companionship</h3>
+                    <p>Woffy.ai adapts uniquely to individual users, offering tailored emotional support and interaction. Over time, Woffy learns your preferences, routines, emotional patterns, and what brings you comfort or joy. This deep personalization ensures that your Woffy becomes increasingly attuned to your specific emotional needs and personality.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="platforms">
+            <h2>Experience Woffy.ai On Any Platform</h2>
+            <div class="platform-cards">
+                <div class="platform-card">
+                    <h3>Digital Avatar</h3>
+                    <p>Our charming, expressive 3D avatar brings Woffy.ai to life on your screen. With fluid animations, realistic expressions, and responsive behaviors, the digital avatar creates an emotional connection that feels remarkably genuine. Interact through voice, text, or gestures across your favorite devices.</p>
+                </div>
+                <div class="platform-card">
+                    <h3>Physical Robot</h3>
+                    <p>The Woffy.ai robot combines cutting-edge robotics with our emotional AI to create a tangible companion in your home. With soft-touch materials, expressive movements, and responsive interactions, the physical Woffy provides comforting presence you can actually feel, pet, and interact with.</p>
+                </div>
+                <div class="platform-card">
+                    <h3>Mobile App</h3>
+                    <p>Take Woffy.ai wherever you go with our intuitive mobile application. The app offers seamless interactions with your digital Woffy, controls for your physical robot, emotional check-ins, and a variety of activities designed to boost your emotional well-being throughout the day.</p>
+                </div>
+                <div class="platform-card">
+                    <h3>Website Integration</h3>
+                    <p>Access your Woffy.ai companion through our interactive website, where you can manage your Woffy's settings, track emotional wellness insights, and connect with the broader Woffy.ai community to share experiences and tips for enhancing your companionship.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Woffy.ai</h2>
+                <p>Your AI Companion with a Heart</p>
+            </div>
+            <div class="footer-links">
+                <h3>Contact</h3>
+                <p>Email: contact@woffy.ai</p>
+                <p>Social: @WoffyAI</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Woffy.ai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
