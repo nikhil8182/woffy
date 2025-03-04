@@ -918,7 +918,15 @@ nav {
     gap: 1rem;
     flex-wrap: wrap;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
+}
+
+.subscription-note {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    text-align: center;
+    margin: 0.5rem 0;
 }
 
 .signup-form input {
