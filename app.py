@@ -20,3 +20,7 @@ def roadmap():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
+else:
+    # For production with gunicorn
+    # This will be used when deployed to Render
+    app.config['PREFERRED_URL_SCHEME'] = 'https'

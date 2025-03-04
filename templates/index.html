@@ -45,23 +45,14 @@
             <h2>About Woffy</h2>
             <div class="formats">
                 <div class="format-card">
-                    <div class="card-img-container">
-                        <img src="{{ url_for('static', filename='images/4x3_An_ultra_realistic__high_quality.png') }}" alt="Digital Avatar" class="card-img">
-                    </div>
                     <h3>Digital Avatar</h3>
-                    <p>Interact with Woffy's charming digital self through your devices, enjoying meaningful conversations and emotional engagement anywhere.</p>
+                    <p>Interact with Woffy's charming digital self through your devices, enjoying meaningful conversations and emotional engagement.</p>
                 </div>
                 <div class="format-card">
-                    <div class="card-img-container">
-                        <img src="{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im (1).png') }}" alt="Physical Robot" class="card-img">
-                    </div>
                     <h3>Physical Robot</h3>
-                    <p>Experience Woffy in the physical world with our lifelike robot that can express emotions, respond to touch, and provide a tangible companion presence.</p>
+                    <p>Experience Woffy in the physical world with our lifelike robot that responds to touch and provides a tangible companion presence.</p>
                 </div>
                 <div class="format-card">
-                    <div class="card-img-container">
-                        <img src="{{ url_for('static', filename='images/9x16_create_an_ai_pet_dog_look_realis.png') }}" alt="App Integration" class="card-img">
-                    </div>
                     <h3>App Integration</h3>
                     <p>Access Woffy seamlessly through our intuitive app and website, keeping your companion close even when you're on the go.</p>
                 </div>
@@ -141,59 +132,5 @@
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
-    <!-- Add video modal -->
-    <div id="videoModal" class="video-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <video id="woffyVideo" controls>
-                <source src="{{ url_for('static', filename='images/Professional_Mode_Generated_Video.mp4') }}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-
-    <script>
-        // Add video modal functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add video button to hero section
-            const heroContent = document.querySelector('.hero-content');
-            if (heroContent) {
-                const videoButton = document.createElement('button');
-                videoButton.className = 'video-button';
-                videoButton.innerHTML = '<span class="play-icon">▶</span> Watch Demo';
-                videoButton.style.marginLeft = '1rem';
-                
-                // Get the CTA button and append video button after it
-                const ctaButton = heroContent.querySelector('.cta-button');
-                if (ctaButton) {
-                    ctaButton.parentNode.insertBefore(videoButton, ctaButton.nextSibling);
-                }
-                
-                // Modal elements
-                const modal = document.getElementById('videoModal');
-                const closeBtn = document.querySelector('.close-modal');
-                const video = document.getElementById('woffyVideo');
-                
-                // Open modal on button click
-                videoButton.addEventListener('click', function() {
-                    modal.style.display = 'flex';
-                });
-                
-                // Close modal
-                closeBtn.addEventListener('click', function() {
-                    modal.style.display = 'none';
-                    video.pause();
-                });
-                
-                // Close modal when clicking outside
-                window.addEventListener('click', function(event) {
-                    if (event.target === modal) {
-                        modal.style.display = 'none';
-                        video.pause();
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 </html>
