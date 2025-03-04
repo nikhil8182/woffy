@@ -19,6 +19,71 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <!-- Add favicon for better mobile experience -->
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Woffy.ai's innovative features - from emotional intelligence to smart home integration, discover how this AI companion enhances your daily life.">
+    <meta name="keywords" content="AI companion features, Woffy features, emotional intelligence, AI pet capabilities, smart home integration, robot pet functions">
+    <meta name="author" content="Onwords">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://woffy.ai/features">
+    <meta property="og:title" content="Woffy.ai Features - Advanced AI Companion Capabilities">
+    <meta property="og:description" content="Discover the innovative features that make Woffy.ai the most advanced AI companion - from emotional intelligence to smart home integration.">
+    <meta property="og:image" content="{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im.png', _external=True) }}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://woffy.ai/features">
+    <meta property="twitter:title" content="Woffy.ai Features - Advanced AI Companion Capabilities">
+    <meta property="twitter:description" content="Discover the innovative features that make Woffy.ai the most advanced AI companion - from emotional intelligence to smart home integration.">
+    <meta property="twitter:image" content="{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im.png', _external=True) }}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://woffy.ai/features">
+    
+    <!-- JSON-LD for structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Woffy.ai Features",
+      "description": "Explore the comprehensive features of Woffy.ai, the emotionally intelligent AI companion pet.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Woffy.ai",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Onwords",
+          "url": "https://onwords.in"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Physical Companion",
+            "description": "Tangible AI companion with expressive movements and responsive interactions"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Mobile App Integration",
+            "description": "Control and interact with Woffy through intuitive mobile applications"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Smart Home Integration",
+            "description": "Connects with popular smart home platforms for a truly connected experience"
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
     <header>

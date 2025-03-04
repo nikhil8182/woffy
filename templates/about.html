@@ -19,6 +19,46 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <!-- Add favicon for better mobile experience -->
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Woffy.ai - the AI companion pet designed with emotional intelligence to provide comfort, joy, and support to users worldwide.">
+    <meta name="keywords" content="AI companion, about Woffy, emotional intelligence, AI pet, Onwords, companion pet, AI technology, robot pet">
+    <meta name="author" content="Onwords">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://woffy.ai/about">
+    <meta property="og:title" content="About Woffy.ai - Your AI Companion with a Heart">
+    <meta property="og:description" content="Discover the story, mission and vision behind Woffy.ai - the AI companion pet designed to bring comfort, joy and connection.">
+    <meta property="og:image" content="{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im.png', _external=True) }}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://woffy.ai/about">
+    <meta property="twitter:title" content="About Woffy.ai - Your AI Companion with a Heart">
+    <meta property="twitter:description" content="Discover the story, mission and vision behind Woffy.ai - the AI companion pet designed to bring comfort, joy and connection.">
+    <meta property="twitter:image" content="{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im.png', _external=True) }}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://woffy.ai/about">
+    
+    <!-- JSON-LD for structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Woffy.ai",
+      "url": "https://woffy.ai",
+      "logo": "{{ url_for('static', filename='images/favicon.ico', _external=True) }}",
+      "description": "Creator of the emotionally intelligent AI companion pet designed to provide comfort and joy.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Onwords",
+        "url": "https://onwords.in"
+      }
+    }
+    </script>
 </head>
 <body>
     <header>

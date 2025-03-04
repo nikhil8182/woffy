@@ -22,6 +22,48 @@
     <!-- Add mobile web app capability -->
     <meta name="apple-mobile-web-app-title" content="Woffy.ai">
     <meta name="description" content="Woffy.ai is your emotionally intelligent AI companion, designed to provide comfort, joy and support throughout your day.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="AI companion, emotional intelligence, AI pet, digital companion, robot pet, Woffy, AI friend, emotional support">
+    <meta name="author" content="Onwords">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://woffy.ai/">
+    <meta property="og:title" content="Woffy.ai - Your AI Companion with a Heart">
+    <meta property="og:description" content="Experience the next generation of AI companionship with Woffy - designed to connect, comfort, and bring joy every day.">
+    <meta property="og:image" content="{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im.png', _external=True) }}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://woffy.ai/">
+    <meta property="twitter:title" content="Woffy.ai - Your AI Companion with a Heart">
+    <meta property="twitter:description" content="Experience the next generation of AI companionship with Woffy - designed to connect, comfort, and bring joy every day.">
+    <meta property="twitter:image" content="{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im.png', _external=True) }}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://woffy.ai/">
+    
+    <!-- JSON-LD for structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Woffy AI Companion",
+      "image": "{{ url_for('static', filename='images/4x3_A_full_body__single__centered_im.png', _external=True) }}",
+      "description": "An emotionally intelligent AI pet designed to connect, comfort, and delight every day, adapting to your needs and emotions.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Woffy.ai"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Onwords",
+        "url": "https://onwords.in"
+      }
+    }
+    </script>
 </head>
 <body>
     <header>

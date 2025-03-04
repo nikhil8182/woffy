@@ -91,6 +91,14 @@ def features():
 @app.route('/roadmap')
 def roadmap():
     return render_template('roadmap.html')
+    
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('robots.txt')
+    
+@app.route('/sitemap.xml')
+def sitemap():
+    return app.send_static_file('sitemap.xml')
 
 @app.route('/subscribe', methods=['POST'])
 def subscribe():
