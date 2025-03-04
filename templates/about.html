@@ -2,22 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Woffy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#121212">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>About - Woffy.ai</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Add favicon for better mobile experience -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <h1>Woffy</h1>
+                <h1>Woffy.ai</h1>
             </div>
-            <ul class="nav-links">
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('about') }}" class="active">About</a></li>
-                <li><a href="{{ url_for('features') }}">Features</a></li>
-                <li><a href="{{ url_for('roadmap') }}">Roadmap</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('about') }}" class="active">About</a>
+                <a href="{{ url_for('features') }}">Features</a>
+                <a href="{{ url_for('roadmap') }}">Roadmap</a>
+            </div>
         </nav>
     </header>
 
@@ -105,17 +110,30 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <h2>Woffy</h2>
-                <p>Your AI Companion with a Heart</p>
+                <h2>Woffy.ai</h2>
+                <p>Companionship reimagined</p>
             </div>
             <div class="footer-links">
-                <h3>Contact</h3>
-                <p>Email: contact@woffy.ai</p>
-                <p>Social: @WoffyAI</p>
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('features') }}">Features</a></li>
+                    <li><a href="{{ url_for('roadmap') }}">Roadmap</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="mailto:contact@woffy.ai">Email Us</a></li>
+                </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2025 Woffy. All rights reserved.</p>
+            <p>&copy; 2025 Woffy.ai. All rights reserved.</p>
         </div>
     </footer>
 

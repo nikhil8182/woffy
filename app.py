@@ -24,3 +24,7 @@ else:
     # For production with gunicorn
     # This will be used when deployed to Render
     app.config['PREFERRED_URL_SCHEME'] = 'https'
+    
+# Configure for production
+import os
+port = int(os.environ.get("PORT", 5000))
